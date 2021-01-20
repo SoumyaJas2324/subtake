@@ -1,13 +1,13 @@
 # subtake
 
-**** Installation:
+### Installation:
  ## git clone https://github.com/jakejarvis/subtake
 
 ***Requires Go.
 
 >> go get github.com/jakejarvis/subtake
 
-***Usage
+### Usage
    Options
 
     -f to-check.txt is the path to your list of subdomains to check. One subdomain per line. Required.
@@ -19,7 +19,7 @@
     -c Path to file containing JSON fingerprint configuration. (Default: ./fingerprints.json)
     -ssl enforces HTTPS requests which may return a different set of results and increase accuracy.
 
-***Resources
+### Resources
 
 ***sonar.sh can be used first to gather a list of CNAMEs collected by Rapid7/scan.io's Project Sonar. This list can then be passed into subtake to return subdomains not in use. sonar.sh is based off of scanio.sh.
 
@@ -31,14 +31,14 @@ ulimit -a          # show current limit (usually 1024)
 ulimit -n 10000    # set waaaaay higher
 ulimit -a          # check new limit
 
-***After generating a list of all vulnerable subdomains, you can use my collection of domains invoked in bug bounty programs to narrow down valuable targets and possibly get some ca$h monie$$$.
-Examples
+### After generating a list of all vulnerable subdomains, you can use my collection of domains invoked in bug bounty programs to narrow down valuable targets and possibly get some ca$h monie$$$.
+**Examples
 
 >> ./sonar.sh 2018-10-27-1540655191 sonar_all_cnames.txt
 
 >> subtake -f sonar_all_cnames.txt -t 50 -ssl -a -o vulnerable.txt
 
-***Subdomain Takeover Tips
+### Subdomain Takeover Tips
 
     A great explanation of the risks of takeovers and steps to responsibly disclose takeovers to companies: https://0xpatrik.com/subdomain-takeover/
     
